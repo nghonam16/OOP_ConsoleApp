@@ -41,17 +41,24 @@ Lab_Week02
 
 ### Biên dịch chương trình chính:
 
-```bash
+```
 g++ -std=c++23 source/main.cpp lib/*.cpp -Ilib -o out/program
+```
 Chạy chương trình:
 
-Trên Linux/macOS: ./out/program
+Trên Linux/macOS: 
+```
+./out/program
+```
 
-Trên Windows: .\out\program.exe
+Trên Windows: 
+```
+.\out\program.exe
+```
+
 Biên dịch và chạy test:
-
+```
 g++ -std=c++23 source/main_tests.cpp lib/*.cpp -Ilib -o out/tests
-
 ./out/tests     # Linux/macOS
 .\out\tests.exe # Windows
 ```
