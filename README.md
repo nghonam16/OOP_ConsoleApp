@@ -25,7 +25,7 @@
 ---
 
 ## 📁 Cấu trúc thư mục
-```cpp
+```
 Lab_Week02
 │
 ├── lib/ # Các module nguồn (header + source)
