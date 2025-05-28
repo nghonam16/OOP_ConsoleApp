@@ -24,3 +24,71 @@
 
 ---
 
+## 📁 Cấu trúc thư mục
+```cpp
+Lab_Week02
+│
+├── lib/ # Các module nguồn (header + source)
+├── source/ # File main.cpp và main_tests.cpp
+├── out/ # File thực thi chương trình và test
+├── docs/ # Tài liệu tạo bởi Doxygen
+├── Doxyfile # Cấu hình Doxygen
+├── README.md # File hướng dẫn này
+```
+---
+
+## ⚙️ Hướng dẫn biên dịch và chạy
+
+### Biên dịch chương trình chính:
+
+```bash
+g++ -std=c++23 source/main.cpp lib/*.cpp -Ilib -o out/program
+Chạy chương trình:
+
+Trên Linux/macOS: ./out/program
+
+Trên Windows: .\out\program.exe
+Biên dịch và chạy test:
+bash
+
+g++ -std=c++23 source/main_tests.cpp lib/*.cpp -Ilib -o out/tests
+
+./out/tests     # Linux/macOS
+.\out\tests.exe # Windows
+```
+## 📚 Tạo tài liệu với Doxygen
+### Tạo file cấu hình (nếu chưa có):
+
+doxygen -g Doxyfile
+Sửa file Doxyfile:
+
+Chỉnh các thông số chính:
+```
+PROJECT_NAME = "Lab_Week02 – OOP Project"
+OUTPUT_DIRECTORY = docs
+INPUT = lib source
+RECURSIVE = YES
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+QUIET = YES
+```
+Tạo tài liệu: doxygen Doxyfile
+Mở docs/index.html để xem tài liệu.
+
+## 📝 Lưu ý
+Comment chi tiết trong file header .h để Doxygen có thể tự động tạo tài liệu rõ ràng.
+
+Giữ mã nguồn sạch, không dùng using namespace std; trong các file thư viện.
+
+Kiểm tra kỹ lỗi biên dịch và runtime.
+
+Sử dụng std::expected (C++23) để xử lý lỗi hợp lý.
+
+## 📞 Liên hệ
+Nếu cần trợ giúp, bạn có thể liên hệ tại:
+
+Email: namnqs12@gmail.com
+
+GitHub: https://github.com/nghonam16
+
+Cảm ơn bạn đã sử dụng dự án này!
