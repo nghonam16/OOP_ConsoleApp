@@ -49,7 +49,6 @@ Trên Linux/macOS: ./out/program
 
 Trên Windows: .\out\program.exe
 Biên dịch và chạy test:
-bash
 
 g++ -std=c++23 source/main_tests.cpp lib/*.cpp -Ilib -o out/tests
 
