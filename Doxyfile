@@ -1,0 +1,23 @@
+# Doxyfile cấu hình đơn giản cho dự án C++
+
+# Đầu ra tài liệu
+OUTPUT_DIRECTORY       = docs
+HTML_OUTPUT            = .
+GENERATE_LATEX         = NO
+
+# Đầu vào: các thư mục chứa mã nguồn
+INPUT                  = lib source
+RECURSIVE              = YES
+FILE_PATTERNS          = *.h *.hpp *.cpp
+
+# Giao diện HTML
+GENERATE_HTML          = YES
+DISABLE_INDEX          = YES
+SEARCHENGINE           = NO
+GENERATE_TREEVIEW      = NO 
+HTML_DYNAMIC_SECTIONS  = NO
+
+# Tối giản nội dung tài liệu
+PROJECT_NAME           = Prime Number App
+PROJECT_BRIEF          = Dự án nhập và xử lý mảng số nguyên tố
+QUIET                  = YES

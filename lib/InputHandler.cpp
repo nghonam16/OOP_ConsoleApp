@@ -4,6 +4,8 @@
 #include <regex>
 #include <format>
 
+// Yêu cầu người dùng nhập một số nguyên trong khoảng [min, max]
+// Trả về std::expected chứa giá trị hợp lệ hoặc thông báo lỗi
 std::expected<int, std::string> requestIntUseCase(const std::string& prompt, int min, int max) {
     std::cout << prompt;
     std::string buffer;
@@ -26,6 +28,9 @@ std::expected<int, std::string> requestIntUseCase(const std::string& prompt, int
     return value;
 }
 
+
+// Yêu cầu người dùng nhập một số nguyên tố trong khoảng [min, max]
+// Trả về std::expected chứa số nguyên tố hoặc thông báo lỗi
 std::expected<int, std::string> requestPrimeUseCase(const std::string& prompt, int min, int max) {
     auto result = requestIntUseCase(prompt, min, max);
     if (!result) return result;
@@ -37,6 +42,8 @@ std::expected<int, std::string> requestPrimeUseCase(const std::string& prompt, i
     return result.value();
 }
 
+
+// Gọi requestIntUseCase lặp lại cho đến khi người dùng nhập hợp lệ
 int requestIntUntilValidUseCase(const std::string& prompt, int min, int max) {
     std::expected<int, std::string> result;
     do {
@@ -48,6 +55,8 @@ int requestIntUntilValidUseCase(const std::string& prompt, int min, int max) {
     return result.value();
 }
 
+
+// Gọi requestPrimeUseCase lặp lại cho đến khi người dùng nhập hợp lệ
 int requestPrimeUntilValidUseCase(const std::string& prompt, int min, int max) {
     std::expected<int, std::string> result;
     do {
@@ -59,6 +68,9 @@ int requestPrimeUntilValidUseCase(const std::string& prompt, int min, int max) {
     return result.value();
 }
 
+
+// Yêu cầu người dùng nhập `n` số nguyên tố trong khoảng [min, max]
+// Mỗi số được nhập bằng cách gọi requestPrimeUntilValidUseCase
 std::vector<int> requestPrimesUseCase(int n, const std::string& prompt, int min, int max) {
     std::cout << prompt << "\n";
     std::vector<int> result;

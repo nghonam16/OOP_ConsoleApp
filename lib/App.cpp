@@ -8,6 +8,8 @@ void appConfig() {
     // Hàm cấu hình (dự kiến sử dụng trong tương lai)
 }
 
+
+// Hàm chạy chính của ứng dụng, xử lý toàn bộ luồng tương tác với người dùng
 void appRun() {
     int min = 2;
     int max = 10;
