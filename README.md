@@ -20,7 +20,7 @@
 
 ## 📷 Đã push thành công mã nguồn lên GitHub
 
-![Push thành công lên GitHub](repo.png)
+![Push thành công lên GitHub](push_github.png)
 
 ---
 
