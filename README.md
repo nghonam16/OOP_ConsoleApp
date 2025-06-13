@@ -93,7 +93,7 @@ Sử dụng std::expected (C++23) để xử lý lỗi hợp lý.
 ## 📞 Liên hệ
 Nếu cần trợ giúp, bạn có thể liên hệ tại:
 
-Email: namnqs12@gmail.com
+Email: nghoofnam@gmail.com
 
 GitHub: https://github.com/nghonam16
 
